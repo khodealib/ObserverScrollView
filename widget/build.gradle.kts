@@ -7,7 +7,7 @@ android {
     compileSdkVersion(Config.compileSdk)
 
     defaultConfig {
-        minSdkVersion(Config.minSdk)
+        minSdkVersion(Config.minSdkLib)
         targetSdkVersion(Config.targetSdk)
         versionCode = Config.versionCode
         versionName = Config.versionName

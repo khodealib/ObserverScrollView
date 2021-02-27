@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId(Config.applicationId)
-        minSdkVersion(Config.minSdk)
+        minSdkVersion(Config.minSdkSample)
         targetSdkVersion(Config.targetSdk)
         versionCode = Config.versionCode
         versionName = Config.versionName
