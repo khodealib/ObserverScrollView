@@ -4,14 +4,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion(30)
-    buildToolsVersion("30.0.3")
+    compileSdkVersion(Config.compileSdk)
 
     defaultConfig {
-        minSdkVersion(17)
-        targetSdkVersion(30)
-        versionCode = 1
-        versionName = "1.0"
+        minSdkVersion(Config.minSdk)
+        targetSdkVersion(Config.targetSdk)
+        versionCode = Config.versionCode
+        versionName = Config.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -30,13 +29,13 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = Config.jvmTarget
     }
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:+")
-    implementation("com.google.android.material:material:+")
-    testImplementation("junit:junit:+")
-    androidTestImplementation("androidx.test.ext:junit:+")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:${Dependency.kotlin}")
+    implementation("com.google.android.material:material:${Dependency.material}")
+    testImplementation("junit:junit:${Dependency.junit}")
+    androidTestImplementation("androidx.test.ext:junit:${Dependency.androidJUnit}")
 }

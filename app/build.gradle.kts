@@ -4,15 +4,14 @@ plugins {
 }
 
 android {
-    compileSdkVersion(30)
-    buildToolsVersion("30.0.3")
+    compileSdkVersion(Config.compileSdk)
 
     defaultConfig {
-        applicationId("com.khodealib.observerscrollview")
-        minSdkVersion(17)
-        targetSdkVersion(30)
-        versionCode = 1
-        versionName = "1.0"
+        applicationId(Config.applicationId)
+        minSdkVersion(Config.minSdk)
+        targetSdkVersion(Config.targetSdk)
+        versionCode = Config.versionCode
+        versionName = Config.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -31,16 +30,16 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = Config.jvmTarget
     }
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.4.31")
-    implementation("androidx.core:core-ktx:1.3.2")
-    implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("com.google.android.material:material:1.3.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.2")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:${Dependency.kotlin}")
+    implementation("androidx.core:core-ktx:${Dependency.core}")
+    implementation("androidx.appcompat:appcompat:${Dependency.appcompat}")
+    implementation("com.google.android.material:material:${Dependency.material}")
+    testImplementation("junit:junit:${Dependency.junit}")
+    androidTestImplementation("androidx.test.ext:junit:${Dependency.junitExt}")
+    androidTestImplementation("androidx.test.espresso:espresso-core:${Dependency.espresso}")
 }

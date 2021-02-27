@@ -5,9 +5,9 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:4.1.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:+")
-        classpath("com.github.dcendents:android-maven-gradle-plugin:+")
+        classpath("com.android.tools.build:gradle:${Dependency.gradle}")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Dependency.kotlin}")
+        classpath("com.github.dcendents:android-maven-gradle-plugin:${Dependency.androidMavenGradlePlugin}")
     }
 }
 
