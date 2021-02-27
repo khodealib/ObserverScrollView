@@ -1,3 +1,3 @@
-include ':widget'
-include ':app'
+include(":widget")
+include(":app")
 rootProject.name = "ObserverScrollView"
