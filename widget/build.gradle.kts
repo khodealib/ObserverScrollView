@@ -3,6 +3,8 @@ plugins {
     kotlin("android")
 }
 
+group="com.github.khodealib"
+
 android {
     compileSdkVersion(Config.compileSdk)
 
